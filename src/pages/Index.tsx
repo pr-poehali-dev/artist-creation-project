@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
-import MusicPlayer from '@/components/MusicPlayer';
+import VkMusicPlayer from '@/components/VkMusicPlayer';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -99,7 +99,9 @@ export default function Index() {
             <h2 className="text-5xl font-heading font-bold gradient-text text-center mb-12">
               Музыка
             </h2>
-            <MusicPlayer />
+            <div className="max-w-4xl mx-auto">
+              <VkMusicPlayer ownerId="32295596" />
+            </div>
           </section>
         )}
 
