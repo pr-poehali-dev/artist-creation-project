@@ -17,7 +17,7 @@ export default function Index() {
           <section className="container mx-auto px-4 py-20 animate-fade-in">
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <h1 className="text-6xl md:text-8xl font-heading font-bold gradient-text animate-float">
-                Барсагян Гиорги Владимирович
+                Барсагян Гиорги Владимерович
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
                 Исследуя границы творчества через слово, музыку и визуальное искусство
@@ -227,7 +227,7 @@ export default function Index() {
 
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>© 2026 Барсагян Гиорги Владимирович. Все права защищены.</p>
+          <p>© 2026 Барсагян Гиорги Владимерович. Все права защищены.</p>
         </div>
       </footer>
     </div>
