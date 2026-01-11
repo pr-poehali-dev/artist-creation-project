@@ -99,8 +99,75 @@ export default function Index() {
             <h2 className="text-5xl font-heading font-bold gradient-text text-center mb-12">
               Музыка
             </h2>
+
+            <div className="max-w-4xl mx-auto mb-12">
+              <Card className="p-8 backdrop-blur-lg bg-card/50 border-primary/20 text-center">
+                <p className="text-xl text-muted-foreground mb-6">
+                  Оригинальные композиции, DJ сеты и творческие эксперименты со звуком
+                </p>
+                <a
+                  href="https://vk.com/giorgibarsagyan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#0077FF] hover:bg-[#0066DD] text-white rounded-lg font-semibold transition-all hover:scale-105"
+                >
+                  <Icon name="Music" size={20} />
+                  Подписаться на ВКонтакте
+                </a>
+              </Card>
+            </div>
+
+            <div className="max-w-6xl mx-auto mb-12">
+              <h3 className="text-3xl font-heading font-bold text-center mb-8">Жанры и стили</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { icon: 'Radio', title: 'Electronic', gradient: 'from-purple-500 to-pink-500' },
+                  { icon: 'Mic2', title: 'Hip-Hop', gradient: 'from-orange-500 to-red-500' },
+                  { icon: 'Headphones', title: 'DJ Sets', gradient: 'from-blue-500 to-cyan-500' },
+                  { icon: 'Music2', title: 'Experimental', gradient: 'from-green-500 to-teal-500' },
+                ].map((genre, i) => (
+                  <Card
+                    key={i}
+                    className="p-6 backdrop-blur-lg bg-card/50 border-border/50 hover:border-primary/40 transition-all cursor-pointer group"
+                  >
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${genre.gradient} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform`}>
+                      <Icon name={genre.icon as any} size={28} className="text-white" />
+                    </div>
+                    <h4 className="text-center font-heading font-bold">{genre.title}</h4>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
             <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl font-heading font-bold text-center mb-8">Мои треки</h3>
               <VkMusicPlayer ownerId="32295596" />
+            </div>
+
+            <div className="max-w-4xl mx-auto mt-12">
+              <Card className="p-8 backdrop-blur-lg bg-card/50 border-primary/20">
+                <h3 className="text-2xl font-heading font-bold mb-4 text-center">Где меня слушать</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {[
+                    { name: 'ВКонтакте', link: 'https://vk.com/giorgibarsagyan', icon: 'Music' },
+                    { name: 'YouTube', link: '#', icon: 'Youtube' },
+                    { name: 'SoundCloud', link: '#', icon: 'Radio' },
+                  ].map((platform, i) => (
+                    <a
+                      key={i}
+                      href={platform.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-primary/20 transition-all group"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Icon name={platform.icon as any} size={20} className="text-white" />
+                      </div>
+                      <span className="font-semibold">{platform.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </Card>
             </div>
           </section>
         )}
