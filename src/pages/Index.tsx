@@ -198,13 +198,15 @@ export default function Index() {
                 </div>
                 <div className="space-y-4">
                   {[
-                    { icon: 'Mail', label: 'Email', value: 'contact@example.com' },
-                    { icon: 'Phone', label: 'Телефон', value: '+7 (900) 123-45-67' },
-                    { icon: 'Instagram', label: 'Instagram', value: '@creative_artist' },
-                    { icon: 'Youtube', label: 'YouTube', value: 'youtube.com/channel' },
+                    { icon: 'Mail', label: 'Email', value: 'barsagyan@internet.ru', link: 'mailto:barsagyan@internet.ru' },
+                    { icon: 'Phone', label: 'Телефон', value: '+7 (906) 636-60-96', link: 'tel:+79066366096' },
+                    { icon: 'User', label: 'ВКонтакте', value: 'vk.com/dj_barsagyan', link: 'https://vk.com/dj_barsagyan' },
                   ].map((contact, i) => (
-                    <div
+                    <a
                       key={i}
+                      href={contact.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer"
                     >
                       <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
@@ -214,7 +216,7 @@ export default function Index() {
                         <p className="text-sm text-muted-foreground">{contact.label}</p>
                         <p className="font-semibold">{contact.value}</p>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </Card>
@@ -225,7 +227,7 @@ export default function Index() {
 
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>© 2026 Творец. Все права защищены.</p>
+          <p>© 2026 Барсагян Гиорги Владимирович. Все права защищены.</p>
         </div>
       </footer>
     </div>
