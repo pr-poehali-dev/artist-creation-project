@@ -3,9 +3,11 @@ import { Card } from '@/components/ui/card';
 
 interface VkMusicPlayerProps {
   ownerId: string;
+  playlistId?: string;
+  hash?: string;
 }
 
-export default function VkMusicPlayer({ ownerId }: VkMusicPlayerProps) {
+export default function VkMusicPlayer({ ownerId, playlistId = '', hash = '' }: VkMusicPlayerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -34,8 +36,8 @@ export default function VkMusicPlayer({ ownerId }: VkMusicPlayerProps) {
         window.VK.Widgets.Playlist(
           containerRef.current.id,
           ownerId,
-          '', // playlist_id (пустая строка = все аудио пользователя)
-          '',
+          playlistId,
+          hash,
           {
             width: '100%',
             height: 500,
@@ -50,7 +52,7 @@ export default function VkMusicPlayer({ ownerId }: VkMusicPlayerProps) {
         containerRef.current.innerHTML = '';
       }
     };
-  }, [ownerId]);
+  }, [ownerId, playlistId, hash]);
 
   return (
     <Card className="overflow-hidden backdrop-blur-lg bg-card/50 border-primary/20">

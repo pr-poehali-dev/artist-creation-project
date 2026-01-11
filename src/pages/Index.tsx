@@ -141,7 +141,11 @@ export default function Index() {
 
             <div className="max-w-4xl mx-auto">
               <h3 className="text-3xl font-heading font-bold text-center mb-8">Мои треки</h3>
-              <VkMusicPlayer ownerId="32295596" />
+              <VkMusicPlayer 
+                ownerId="-200823460" 
+                playlistId="1" 
+                hash="a6dde60b7fa8beb93e"
+              />
             </div>
 
             <div className="max-w-4xl mx-auto mt-12">
