@@ -17,7 +17,7 @@ export default function Index() {
           <section className="container mx-auto px-4 py-20 animate-fade-in">
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <h1 className="text-6xl md:text-8xl font-heading font-bold gradient-text animate-float">
-                Поэт, Писатель, Музыкант
+                Барсагян Гиорги Владимирович
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
                 Исследуя границы творчества через слово, музыку и визуальное искусство

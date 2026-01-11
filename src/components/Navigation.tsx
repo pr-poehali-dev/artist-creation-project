@@ -25,7 +25,7 @@ export default function Navigation({ activeSection, onSectionChange }: Navigatio
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="text-2xl font-heading font-bold gradient-text">
-              Творец
+              Барсагян Г.В.
             </div>
 
             <div className="hidden md:flex items-center gap-1">
